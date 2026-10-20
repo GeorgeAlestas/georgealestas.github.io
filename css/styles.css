@@ -4974,3 +4974,19 @@ input[type="button"].btn--primary:focus {
         gap: 0.2rem;
     }
 }
+
+
+/* ===================================================================
+ * # standalone pages (teaching, outreach)
+ *
+ * ------------------------------------------------------------------- */
+.s-header--page {
+    position: fixed;
+    top: 0;
+    background-color: var(--color-gray-19);
+}
+
+.s-page {
+    min-height: calc(100vh - 12rem);
+    padding-top: calc(var(--vspace-4) + 6.8rem);
+}
