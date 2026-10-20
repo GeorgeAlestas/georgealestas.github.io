@@ -1,298 +1,211 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
-
-    <!--- basic page needs
-    ================================================== -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dr. George Alestas</title>
     <meta name="description" content="George Alestas, postdoctoral researcher in cosmology at IFT Madrid. Dark energy, inflation, gravitational waves and cosmological data analysis.">
     <meta name="author" content="George Alestas">
+    <meta name="theme-color" content="#05070d">
 
-    <!-- mobile specific metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="academicons/css/academicons.min.css"/>
-    
-
-
-    <!-- script
-    ================================================== -->
+    <link rel="stylesheet" href="academicons/css/academicons.min.css">
+    <link rel="stylesheet" href="css/cyber.css">
     <script defer src="js/vendor/fontawesome/all.min.js"></script>
-<script>
-MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-  }
-};
-</script>
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-    <!-- favicons
-    ================================================== -->
+    <script>
+    MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-
 </head>
+<body>
 
-<body id="top" class="ss-preload">
-
-
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader"></div>
-    </div>
-
-
-    <!-- header
-    ================================================== -->
-    <header class="s-header">
-        <div class="row s-header__nav-wrap">
-            <nav class="s-header__nav">
-                <ul>
-                    <li class="current"><a class="smoothscroll" href="#hero">Home</a></li>
-                    <li><a class="smoothscroll" href="#about">About Me</a></li>
-                    <li><a class="smoothscroll" href="#portfolio">Research</a></li>
-                    <li><a href="teaching.html">Teaching</a></li>
-                    <li><a href="outreach.html">Events/Outreach</a></li>
+    <header class="hdr">
+        <div class="wrap hdr__inner">
+            <a class="hdr__logo" href="index.html">G<span>.</span>ALESTAS</a>
+            <nav aria-label="Main">
+                <ul class="nav">
+                <li><a href="#hero" class="is-current"><b>01</b>Home</a></li>
+                <li><a href="#about"><b>02</b>About</a></li>
+                <li><a href="#research"><b>03</b>Research</a></li>
+                <li><a href="teaching.html"><b>04</b>Teaching</a></li>
+                <li><a href="outreach.html"><b>05</b>Events</a></li>
                 </ul>
             </nav>
-        </div> <!-- end row -->
-        
-        <a class="s-header__menu-toggle" href="#0" title="Menu">
-            <span class="s-header__menu-icon"></span>
-        </a>
-    </header> <!-- end s-header -->
+            <span class="hdr__status">IFT &middot; MADRID</span>
+            <button class="hdr__toggle" aria-expanded="false" aria-label="Menu">[ menu ]</button>
+        </div>
+    </header>
 
+    <main>
 
-    <!-- hero
-    ================================================== -->
-    <section id="hero" class="s-hero target-section">
+    <!-- hero -->
+    <section id="hero" class="hero" data-spy>
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="hero__grid" aria-hidden="true"></div>
 
-        <div class="s-hero__bg rellax" data-rellax-speed="-7"></div>
-
-        <div class="row s-hero__content">
-            <div class="column">
-
-                <div class="s-hero__content-about">
-
-                    <h1>Hello There!</h1>
-
-                    <h3>
-                    My name is <span>George Alestas</span> and I have a PhD in <span>Cosmology</span>.<br> Start scrolling
-                    to find out more about <span> me</span> and my <span> work</span>.
-                    </h3>
-
-                    <div class="s-hero__content-social">
-                         <a href="https://inspirehep.net/authors/1718064?ui-citation-summary=true#with-citation-summary"><i class="ai ai-inspire-square" aria-hidden="true"></i></a>
-                        <a href="https://scholar.google.com/citations?user=NIruALgAAAAJ"><i class="ai ai-google-scholar-square" aria-hidden="true"></i></a>
-                        <a href="https://orcid.org/0000-0003-1790-4914"><i class="fab fa-orcid" aria-hidden="true"></i></a>
-                        <a href="https://github.com/GeorgeAlestas"><i class="fab fa-github" aria-hidden="true"></i></a>
-                        <a href="https://twitter.com/AlestasGeorge"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                    </div>
-
-                </div> <!-- end s-hero__content-about -->
-
-            </div>
-        </div> <!-- s-hero__content -->
-
-        <div class="s-hero__scroll">
-            <a href="#about" class="s-hero__scroll-link smoothscroll">
-                <span class="scroll-arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M18.707 12.707L17.293 11.293 13 15.586 13 6 11 6 11 15.586 6.707 11.293 5.293 12.707 12 19.414z"></path></svg>
-                </span>
-                <span class="scroll-text">Scroll Down</span>
-            </a>
-        </div> <!-- s-hero__scroll -->
-
-    </section> <!-- end s-hero -->
-
-
-    <!-- about
-    ================================================== -->
-    <section id="about" class="s-about target-section">
-
-        <div class="row">
-            <div class="column large-3 tab-12">
-                <img class="s-about__pic" src="images/avatars/user-06.jpg" alt="">
-            </div>
-            <div class="column large-9 tab-12 s-about__content">
-                <h3>A few words about me!</h3>
-                <p  style="text-align:left;">
-                        I am a Postdoctoral researcher at the Cosmology group of <a href="https://www.ift.uam-csic.es/en" style="text-decoration: none">Instituto de Física Teórica (IFT)</a> in Madrid. I am a member of the LIGO, Virgo, LISA, Euclid and COMPACT collaborations. Before that, I received my PhD from the University of Ioannina with Prof. Leandros Perivolaropoulos as my advisor, which means I used to be part of <a href="https://cosmology.physics.uoi.gr/" style="text-decoration: none">this</a> awesome Cosmology group.
+        <div class="wrap hero__content">
+            <div>
+                <p class="hero__kicker"><span class="prompt">&gt;</span> <span data-type="init profile --user alestas">init profile --user alestas</span></p>
+                <h1 aria-label="Welcome"><span class="decode" aria-hidden="true" data-words="Welcome|Καλώς ήρθατε|Bienvenidos">Welcome</span></h1>
+                <p class="hero__sub">
+                    My name is <em>George Alestas</em> and I have a PhD in <em>Cosmology</em>.<br>
+                    Start scrolling to find out more about me and my work.
                 </p>
-                <p  style="text-align:left;">
-                        My PhD was all about the Hubble tension: the expansion rate of the Universe comes out different depending on how you measure it. All the methods should agree, give or take, but much to our surprise they DON'T!! Is something wrong with the methodologies, or is it a hint of new and exciting physics? To paraphrase Sidney Coleman, God only knows at the moment, and someday I hope you and me as well.
-                </p>
-                <p  style="text-align:left;">
-                        These days I mostly work on what new data can tell us about the dark sector and the early Universe. I use DESI data and Euclid forecasts to test models of dark energy, such as quintessence, and of inflation, such as &alpha;-attractors. I also search for planetary-mass black holes in gravitational-wave data, and apply machine learning to cosmological model selection and tests of gravity. When I'm not doing physics I enjoy watching movies, some tv series, reading books, programming and cooking for the lucky few that can handle it...
-                </p>
-                <hr>
-
-                <div class="row s-about__content-bottom">
-                    <div class="column w-1000-stack">
-                        <h3>Contact Details</h3>
-    
-                        <p>
-                        Instituto de Física Teórica (IFT)<br>
-                        C/ Nicolás Cabrera 13-15 <br>
-                        Campus de Cantoblanco UAM <br>
-                        28049 Madrid, Spain <br>    
-                        <a href="mailto:alestasg@gmail.com">alestasg@gmail.com</a>, <a href="mailto:g.alestas@csic.es">g.alestas@csic.es</a>
-                        </p>
-                        
-                    </div>
-                    <div class="column w-1000-stack">
-                        <a href="https://georgealestas.github.io/files/CV_Alestas.pdf" class="btn btn--download">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M12 16L16 11 13 11 13 4 11 4 11 11 8 11z"></path><path d="M20,18H4v-7H2v7c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2v-7h-2V18z"></path></svg>
-                             Download CV
-                        </a>
-                    </div>
+                <div class="hero__actions">
+                    <a class="btn btn--alt" href="https://georgealestas.github.io/files/CV_Alestas.pdf" target="_blank" rel="noopener">Download CV</a>
+                </div>
+                <div class="social">
+                    <a href="https://inspirehep.net/authors/1718064" aria-label="INSPIRE"><i class="ai ai-inspire" aria-hidden="true"></i></a>
+                    <a href="https://scholar.google.com/citations?user=NIruALgAAAAJ" aria-label="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i></a>
+                    <a href="https://orcid.org/0000-0003-1790-4914" aria-label="ORCID"><i class="fab fa-orcid" aria-hidden="true"></i></a>
+                    <a href="https://github.com/GeorgeAlestas" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/AlestasGeorge" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                 </div>
             </div>
-        </div> <!-- end row -->
 
-    </section> <!-- end s-about -->
+        </div>
 
-    <!-- research
-    ================================================== -->
-    <section id="portfolio" class="s-portfolio s-research target-section">
+        <a class="hero__scroll" href="#about">Scroll</a>
+    </section>
 
-        <div class="row s-portfolio__header">
-            <div class="column large-12">
-                <h3>Research</h3>
-                <p class="s-research__intro">
+    <!-- about -->
+    <section id="about" class="section" data-spy>
+        <div class="wrap about reveal">
+            <div>
+                <div class="about__photo hud">
+                    <img src="images/avatars/user-06.jpg" alt="George Alestas" width="300" height="300">
+                    <span class="about__scan" aria-hidden="true"></span>
+                </div>
+                <p class="about__caption">id: g.alestas &middot; role: postdoc</p>
+            </div>
+
+            <div class="about__text">
+                <p class="label">01 &mdash; About</p>
+                <h2>A few words about me</h2>
+                <p>
+                    I am a Postdoctoral researcher at the Cosmology group of <a href="https://www.ift.uam-csic.es/en">Instituto de F&iacute;sica Te&oacute;rica (IFT)</a> in Madrid. I am a member of the Euclid, COMPACT, LIGO, Virgo and LISA collaborations. Before that, I received my PhD from the University of Ioannina with Prof. Leandros Perivolaropoulos as my advisor.
+                </p>
+                <p>
+                    My PhD was all about the Hubble tension: the expansion rate of the Universe comes out different depending on how you measure it. All the methods should agree, give or take, but much to our surprise they DON&rsquo;T!! Is something wrong with the methodologies, or is it a hint of new and exciting physics? To paraphrase Sidney Coleman, God only knows at the moment, and someday I hope you and me as well.
+                </p>
+                <p>
+                    These days I mostly work on what new data can tell us about the dark sector and the early Universe. I use DESI data and Euclid forecasts to test models of dark energy, such as quintessence, and of inflation, such as &alpha;-attractors. I also search for planetary-mass black holes in gravitational-wave data, and apply machine learning to cosmological model selection and tests of gravity. When I&rsquo;m not doing physics I enjoy watching movies, some tv series, reading books, programming and cooking for the lucky few that can handle it...
+                </p>
+
+                <dl class="spec">
+                    <div><dt>Affiliation</dt><dd>IFT (UAM-CSIC), Madrid</dd></div>
+                    <div><dt>Collaborations</dt><dd>Euclid &middot; COMPACT &middot; LIGO &middot; Virgo &middot; LISA</dd></div>
+                    <div><dt>Address</dt><dd>C/ Nicol&aacute;s Cabrera 13-15, Campus de Cantoblanco UAM, 28049 Madrid</dd></div>
+                    <div><dt>Contact</dt><dd><a href="mailto:alestasg@gmail.com">alestasg@gmail.com</a><br><a href="mailto:g.alestas@csic.es">g.alestas@csic.es</a></dd></div>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <!-- research -->
+    <section id="research" class="section section--alt" data-spy>
+        <div class="wrap">
+            <div class="reveal">
+                <p class="label">02 &mdash; Work</p>
+                <h2>Research</h2>
+                <p class="section__intro">
                     I work at the interface of cosmological data and theory: what current and upcoming
                     surveys can tell us about dark energy, inflation, gravity and the early Universe.
                 </p>
-                <ul class="research-topics">
-                    <li>Dark energy &amp; quintessence</li>
-                    <li>DESI &amp; Euclid</li>
-                    <li>Inflation</li>
-                    <li>Gravitational waves</li>
-                    <li>Primordial black holes</li>
-                    <li>Machine learning</li>
-                    <li>Hubble tension</li>
-                    <li>Modified gravity</li>
-                    <li>Cosmic topology</li>
+                <ul class="tags">
+                    <li>dark-energy</li>
+                    <li>quintessence</li>
+                    <li>DESI</li>
+                    <li>Euclid</li>
+                    <li>inflation</li>
+                    <li>gravitational-waves</li>
+                    <li>primordial-black-holes</li>
+                    <li>machine-learning</li>
+                    <li>hubble-tension</li>
+                    <li>modified-gravity</li>
+                    <li>cosmic-topology</li>
                 </ul>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="column large-12">
-                <h4 class="s-research__subhead">Selected publications</h4>
-            </div>
-        </div>
+            <h3 class="subhead reveal"><span>&gt;&gt;</span> Selected publications</h3>
+            <div class="pubs reveal">
+                <article class="pub">
+                    <div class="pub__meta"><span class="yr">2025</span><span>Dark energy</span></div>
+                    <h3>Has DESI detected exponential quintessence?</h3>
+                    <p class="pub__authors">Y. Akrami, <strong>G. Alestas</strong>, S. Nesseris</p>
+                    <p class="pub__venue">arXiv preprint</p>
+                    <div class="pub__links">
+                        <a href="https://arxiv.org/abs/2504.04226">arXiv</a>
+                        <a href="https://github.com/GeorgeAlestas/Quint_DESI">Code</a>
+                    </div>
+                </article>
 
-        <div class="row">
-        <div class="column large-12 pub-list">
+                <article class="pub">
+                    <div class="pub__meta"><span class="yr">2024</span><span>Dark energy</span></div>
+                    <h3>To curve, or not to curve: Is curvature-assisted quintessence observationally viable?</h3>
+                    <p class="pub__authors"><strong>G. Alestas</strong>, M. Delgado, I. Ruiz, Y. Akrami, M. Montero, S. Nesseris</p>
+                    <p class="pub__venue">Phys. Rev. D 110, 106010</p>
+                    <div class="pub__links">
+                        <a href="https://arxiv.org/abs/2406.09212">arXiv</a>
+                        <a href="https://doi.org/10.1103/PhysRevD.110.106010">Journal</a>
+                    </div>
+                </article>
 
-            <article class="pub">
-                <div class="pub__meta"><span class="pub__year">2025</span> <span class="pub__tag">Dark energy</span></div>
-                <h5 class="pub__title">Has DESI detected exponential quintessence?</h5>
-                <p class="pub__authors">Y. Akrami, <strong>G. Alestas</strong>, S. Nesseris</p>
-                <p class="pub__venue">arXiv preprint</p>
-                <p class="pub__links">
-                    <a href="https://arxiv.org/abs/2504.04226">arXiv</a>
-                    <a href="https://github.com/GeorgeAlestas/Quint_DESI">Code</a>
-                </p>
-            </article>
+                <article class="pub">
+                    <div class="pub__meta"><span class="yr">2021</span><span>Hubble tension</span></div>
+                    <h3>A <em>w</em>&ndash;<em>M</em> phantom transition at <em>z<sub>t</sub></em> &lt; 0.1 as a resolution of the Hubble tension</h3>
+                    <p class="pub__authors"><strong>G. Alestas</strong>, L. Kazantzidis, L. Perivolaropoulos</p>
+                    <p class="pub__venue">Phys. Rev. D 103, 083517</p>
+                    <div class="pub__links">
+                        <a href="https://arxiv.org/abs/2012.13932">arXiv</a>
+                        <a href="https://doi.org/10.1103/PhysRevD.103.083517">Journal</a>
+                        <a href="https://github.com/GeorgeAlestas/LwMPT">Code</a>
+                    </div>
+                </article>
 
-            <article class="pub">
-                <div class="pub__meta"><span class="pub__year">2024</span> <span class="pub__tag">Dark energy</span></div>
-                <h5 class="pub__title">To curve, or not to curve: Is curvature-assisted quintessence observationally viable?</h5>
-                <p class="pub__authors"><strong>G. Alestas</strong>, M. Delgado, I. Ruiz, Y. Akrami, M. Montero, S. Nesseris</p>
-                <p class="pub__venue">Phys. Rev. D 110, 106010</p>
-                <p class="pub__links">
-                    <a href="https://arxiv.org/abs/2406.09212">arXiv</a>
-                    <a href="https://doi.org/10.1103/PhysRevD.110.106010">Journal</a>
-                </p>
-            </article>
-
-            <article class="pub">
-                <div class="pub__meta"><span class="pub__year">2021</span> <span class="pub__tag">Hubble tension</span></div>
-                <h5 class="pub__title">A <em>w</em>&ndash;<em>M</em> phantom transition at <em>z<sub>t</sub></em> &lt; 0.1 as a resolution of the Hubble tension</h5>
-                <p class="pub__authors"><strong>G. Alestas</strong>, L. Kazantzidis, L. Perivolaropoulos</p>
-                <p class="pub__venue">Phys. Rev. D 103, 083517</p>
-                <p class="pub__links">
-                    <a href="https://arxiv.org/abs/2012.13932">arXiv</a>
-                    <a href="https://doi.org/10.1103/PhysRevD.103.083517">Journal</a>
-                    <a href="https://github.com/GeorgeAlestas/LwMPT">Code</a>
-                </p>
-            </article>
-
-            <article class="pub">
-                <div class="pub__meta"><span class="pub__year">2020</span> <span class="pub__tag">Hubble tension</span></div>
-                <h5 class="pub__title"><em>H</em><sub>0</sub> tension, phantom dark energy, and cosmological parameter degeneracies</h5>
-                <p class="pub__authors"><strong>G. Alestas</strong>, L. Kazantzidis, L. Perivolaropoulos</p>
-                <p class="pub__venue">Phys. Rev. D 101, 123516</p>
-                <p class="pub__links">
-                    <a href="https://arxiv.org/abs/2004.08363">arXiv</a>
-                    <a href="https://doi.org/10.1103/PhysRevD.101.123516">Journal</a>
-                    <a href="https://github.com/GeorgeAlestas/H0_Tension_Data">Code</a>
-                </p>
-            </article>
-
-        </div> <!-- end pub-list -->
-        </div>
-
-
-        <div class="row" id="latest-papers" hidden>
-            <div class="column large-12">
-                <h4 class="s-research__subhead">Latest papers</h4>
-                <ol class="latest-list"></ol>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="column large-12 s-research__more">
-                <a class="btn btn--stroke" href="https://inspirehep.net/authors/1718064">Full list on INSPIRE</a>
-                <a class="btn btn--stroke" href="https://scholar.google.com/citations?user=NIruALgAAAAJ">Google Scholar</a>
-            </div>
-        </div>
-
-    </section> <!-- end s-research -->
-
-
-    
-
-    <!-- footer
-    ================================================== -->
-    <footer class="s-footer">
-        <div class="row">
-            <div class="column large-4 medium-6 w-1000-stack s-footer__social-block">
-                
+                <article class="pub">
+                    <div class="pub__meta"><span class="yr">2020</span><span>Hubble tension</span></div>
+                    <h3><em>H</em><sub>0</sub> tension, phantom dark energy, and cosmological parameter degeneracies</h3>
+                    <p class="pub__authors"><strong>G. Alestas</strong>, L. Kazantzidis, L. Perivolaropoulos</p>
+                    <p class="pub__venue">Phys. Rev. D 101, 123516</p>
+                    <div class="pub__links">
+                        <a href="https://arxiv.org/abs/2004.08363">arXiv</a>
+                        <a href="https://doi.org/10.1103/PhysRevD.101.123516">Journal</a>
+                        <a href="https://github.com/GeorgeAlestas/H0_Tension_Data">Code</a>
+                    </div>
+                </article>
             </div>
 
-            <div class="column large-7 medium-6 w-1000-stack ss-copyright">
-                <span>© 2026 George Alestas</span> 
-                <span>Powered by Ceevee and <a href="https://www.styleshout.com/">StyleShout</a></span>
+            <h3 class="subhead reveal"><span>&gt;&gt;</span> Latest papers</h3>
+            <div class="terminal reveal">
+                <div class="terminal__bar"><i></i><i></i><i></i><span>inspirehep.net &mdash; live feed</span></div>
+                <div class="terminal__body">
+                    <p class="terminal__cmd"><span class="prompt">$</span> fetch --source inspire --author alestas --latest 5</p>
+                    <ol class="feed"></ol>
+                    <p class="terminal__status">connecting&hellip;</p>
+                </div>
+            </div>
+
+            <div class="links-row reveal">
+                <a class="btn" href="https://inspirehep.net/authors/1718064">Full list on INSPIRE</a>
+                <a class="btn" href="https://scholar.google.com/citations?user=NIruALgAAAAJ">Google Scholar</a>
             </div>
         </div>
+    </section>
 
-        <div class="ss-go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v2H6zm5 10v6h2v-6h5l-6-6-6 6z"/></svg>
-             </a>
-        </div> <!-- end ss-go-top -->
+    </main>
+
+    <footer class="ftr">
+        <div class="wrap">
+            <span>&copy; 2026 George Alestas</span>
+            <span><a href="legacy/">legacy site</a> &middot; // end of transmission</span>
+        </div>
     </footer>
 
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
+    <script src="js/cyber.js"></script>
 </body>
-
 </html>
