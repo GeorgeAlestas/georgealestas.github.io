@@ -296,6 +296,96 @@
     }; // end ssBackToTop
 
 
+   /* latest papers, pulled from INSPIRE so the list stays current
+    * ------------------------------------------------------ */
+    const ssLatestPapers = function() {
+
+        const block = document.getElementById('latest-papers');
+        if (!block) return;
+
+        const list = block.querySelector('.latest-list');
+        const count = 5;
+        const url = 'https://inspirehep.net/api/literature?sort=mostrecent&size=10' +
+            '&q=authors.recid:1718064' +
+            '&fields=titles,authors.full_name,author_count,collaborations,arxiv_eprints,preprint_date,document_type,control_number';
+        const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+        // "Alestas, George" -> "G. Alestas"
+        const shortName = function(fullName) {
+            const parts = fullName.split(',');
+            if (parts.length < 2) return fullName;
+            const initials = parts[1].trim().split(/[\s-]+/).map(function(n) { return n.charAt(0) + '.'; }).join(' ');
+            return initials + ' ' + parts[0].trim();
+        };
+
+        // titles can contain MathML; keep only the text (LaTeX is left for MathJax)
+        const plainText = function(html) {
+            return new DOMParser().parseFromString(html, 'text/html').body.textContent;
+        };
+
+        fetch(url)
+            .then(function(response) { return response.json(); })
+            .then(function(data) {
+                const papers = data.hits.hits
+                    .map(function(hit) { return hit.metadata; })
+                    .filter(function(m) { return m.document_type.indexOf('article') !== -1; })
+                    .slice(0, count);
+
+                papers.forEach(function(m) {
+                    const li = document.createElement('li');
+                    const date = document.createElement('span');
+                    const body = document.createElement('div');
+                    const title = document.createElement('a');
+                    const authors = document.createElement('span');
+
+                    if (m.preprint_date) {
+                        const d = m.preprint_date.split('-');
+                        date.textContent = months[parseInt(d[1], 10) - 1] + ' ' + d[0];
+                    }
+                    date.className = 'latest-list__date';
+
+                    title.className = 'latest-list__title';
+                    title.textContent = plainText(m.titles[0].title);
+                    title.href = m.arxiv_eprints
+                        ? 'https://arxiv.org/abs/' + m.arxiv_eprints[0].value
+                        : 'https://inspirehep.net/literature/' + m.control_number;
+
+                    authors.className = 'latest-list__authors';
+                    if (m.collaborations && m.author_count > 10) {
+                        authors.textContent = m.collaborations[0].value + ' Collaboration';
+                    } else {
+                        m.authors.forEach(function(a, i) {
+                            const name = shortName(a.full_name);
+                            if (i > 0) authors.appendChild(document.createTextNode(', '));
+                            if (a.full_name.indexOf('Alestas') === 0) {
+                                const strong = document.createElement('strong');
+                                strong.textContent = name;
+                                authors.appendChild(strong);
+                            } else {
+                                authors.appendChild(document.createTextNode(name));
+                            }
+                        });
+                    }
+
+                    body.appendChild(title);
+                    body.appendChild(authors);
+                    li.appendChild(date);
+                    li.appendChild(body);
+                    list.appendChild(li);
+                });
+
+                if (papers.length) {
+                    block.hidden = false;
+                    if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([list]);
+                }
+            })
+            .catch(function() {
+                // INSPIRE unreachable: leave the block hidden, the "Full list" link still works
+            });
+
+    }; // end ssLatestPapers
+
+
 
    /* initialize
     * ------------------------------------------------------ */
@@ -311,6 +401,7 @@
         ssAlertBoxes();
         ssSmoothScroll();
         ssBackToTop();
+        ssLatestPapers();
 
     })();
 
