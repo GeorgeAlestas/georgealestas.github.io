@@ -826,9 +826,6 @@ p { margin: 0 0 1.2em; }
     color: var(--text-faint);
 }
 
-.ftr a { color: var(--text-faint); }
-.ftr a:hover, .ftr a:focus-visible { color: var(--cyan); }
-
 .ftr .wrap {
     display: flex;
     flex-wrap: wrap;
