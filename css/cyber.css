@@ -487,7 +487,6 @@ p { margin: 0 0 1.2em; }
     display: block;
     width: 100%;
     height: auto;
-    filter: grayscale(.35) contrast(1.05);
 }
 
 /* scanning line over the photo */
