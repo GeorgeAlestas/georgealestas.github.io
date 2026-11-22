@@ -918,3 +918,131 @@ p { margin: 0 0 1.2em; }
     .timeline { padding-left: 22px; }
     .timeline li::before { left: -27px; top: 24px; }
 }
+
+/* ===================================================================
+ * apps page
+ * ------------------------------------------------------------------- */
+.app__head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.app__icon {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    color: var(--cyan);
+    border: 1px solid var(--line-strong);
+    background: rgba(34, 230, 255, 0.05);
+}
+
+.app h3 { margin-bottom: 2px; }
+
+.app__kind {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--amber);
+}
+
+.app__tagline {
+    color: var(--text);
+    margin-bottom: 14px;
+}
+
+.app__features {
+    list-style: none;
+    margin: 0 0 18px;
+    padding: 0;
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+.app__features li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    line-height: 1.55;
+}
+
+.app__features li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    font-family: var(--font-mono);
+    color: var(--magenta);
+}
+
+.app__features code {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text);
+}
+
+.app__req {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: .06em;
+    color: var(--text-faint);
+    margin-bottom: 18px;
+}
+
+.app__actions {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.app__install summary {
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--text-muted);
+}
+
+.app__install summary:hover { color: var(--cyan); }
+
+.app__install p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.support {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px 32px;
+    margin-top: 48px;
+    padding: 26px 30px;
+    border: 1px dashed rgba(255, 61, 154, 0.45);
+    background: rgba(255, 61, 154, 0.03);
+}
+
+.support p {
+    margin: 0;
+    max-width: 36em;
+    color: var(--text);
+}
+
+.support__title {
+    display: block;
+    margin-bottom: 4px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: var(--magenta);
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Apps | Dr. George Alestas</title>
+    <meta name="description" content="arXiv Digest and SciPeek: free macOS apps by George Alestas for following arXiv and previewing scientific data files.">
+    <meta name="author" content="George Alestas">
+    <meta name="theme-color" content="#05070d">
+
+    <link rel="stylesheet" href="academicons/css/academicons.min.css">
+    <link rel="stylesheet" href="css/cyber.css">
+    <script defer src="js/vendor/fontawesome/all.min.js"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+
+    <header class="hdr">
+        <div class="wrap hdr__inner">
+            <a class="hdr__logo" href="index.html">G<span>.</span>ALESTAS</a>
+            <nav aria-label="Main">
+                <ul class="nav">
+                <li><a href="index.html"><b>00</b>Home</a></li>
+                <li><a href="index.html#about"><b>01</b>About</a></li>
+                <li><a href="index.html#research"><b>02</b>Research</a></li>
+                <li><a href="outreach.html"><b>03</b>Talks</a></li>
+                <li><a href="teaching.html"><b>04</b>Teaching</a></li>
+                <li><a href="apps.html" class="is-current"><b>05</b>Apps</a></li>
+                </ul>
+            </nav>
+            <span class="hdr__status">IFT &middot; MADRID</span>
+            <button class="hdr__toggle" aria-expanded="false" aria-label="Menu">[ menu ]</button>
+        </div>
+    </header>
+
+    <main>
+    <section class="section section--page">
+        <div class="wrap">
+            <p class="label">05 &mdash; Apps</p>
+            <h2>Apps</h2>
+            <p class="section__intro">Two small macOS tools I built for my own research workflow. Both are free to download.</p>
+            <div class="pubs apps">
+                <article class="pub app">
+                    <div class="app__head">
+                        <span class="app__icon" aria-hidden="true"><i class="fa-solid fa-newspaper"></i></span>
+                        <div>
+                            <h3>arXiv Digest</h3>
+                            <p class="app__kind">v0.1.0 &middot; menu bar app</p>
+                        </div>
+                    </div>
+                    <p class="app__tagline">Each day&rsquo;s new arXiv listings in your categories, ranked against your own papers, right in the menu bar.</p>
+                    <ul class="app__features">
+                        <li>Daily listings for any arXiv categories, refreshed after each announcement</li>
+                        <li>Ranks papers on your Mac against your own papers, keywords and followed authors; nothing leaves your Mac except requests to arXiv</li>
+                        <li>Tick papers and press &#8984;E to export BibTeX to the clipboard and your <code>.bib</code> file</li>
+                        <li>Readable LaTeX in titles and abstracts (&Lambda;CDM, H<sub>0</sub>), light and dark mode</li>
+                    </ul>
+                    <p class="app__req">macOS 14+ &middot; Apple Silicon &amp; Intel &middot; 0.8&nbsp;MB</p>
+                    <div class="app__actions">
+                        <a class="btn" href="downloads/ArxivDigest-0.1.0.zip" download>Download for macOS</a>
+                        <details class="app__install">
+                            <summary>First launch</summary>
+                            <p>Unzip and move <b>ArxivDigest.app</b> to Applications. The app isn&rsquo;t notarized by Apple yet, so the first time macOS will refuse to open it: right-click the app &rarr; <b>Open</b> &rarr; <b>Open</b>.</p>
+                        </details>
+                    </div>
+                </article>
+
+                <article class="pub app">
+                    <div class="app__head">
+                        <span class="app__icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <div>
+                            <h3>SciPeek</h3>
+                            <p class="app__kind">v1.0.1 &middot; Quick Look extension</p>
+                        </div>
+                    </div>
+                    <p class="app__tagline">Press Space in Finder to preview FITS, HDF5, NumPy, Jupyter and Mathematica files.</p>
+                    <ul class="app__features">
+                        <li>FITS images with stretch and colormaps, header cards and tables</li>
+                        <li>HDF5 trees, NumPy arrays, and rendered Jupyter and Mathematica notebooks</li>
+                        <li>Statistics and a histogram for every numeric view, plus data thumbnails in Finder</li>
+                        <li>Pure Swift and sandboxed, with no network access</li>
+                    </ul>
+                    <p class="app__req">macOS 14+ &middot; Apple Silicon &amp; Intel &middot; 7&nbsp;MB</p>
+                    <div class="app__actions">
+                        <a class="btn" href="downloads/SciPeek-1.0.1.zip" download>Download for macOS</a>
+                        <details class="app__install">
+                            <summary>First launch</summary>
+                            <p>Unzip, move <b>SciPeek.app</b> to Applications and open it. It isn&rsquo;t notarized by Apple yet, so macOS will say it can&rsquo;t verify the developer: open <b>System Settings &rarr; Privacy &amp; Security</b> and click <b>Open Anyway</b>. Then select a supported file in Finder and press Space.</p>
+                        </details>
+                    </div>
+                </article>
+            </div>
+
+            <div class="support">
+                <p><span class="support__title"><i class="fa-solid fa-mug-hot" aria-hidden="true"></i> Support</span>
+                These apps are free. If they save you time, you can buy me a coffee.</p>
+                <a class="btn btn--alt" href="https://buymeacoffee.com/alestasgy" target="_blank" rel="noopener">Buy me a coffee</a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="ftr">
+        <div class="wrap">
+            <span>&copy; 2026 George Alestas</span>
+            <span>// end of transmission</span>
+        </div>
+    </footer>
+
+    <script src="js/cyber.js"></script>
+</body>
+</html>
