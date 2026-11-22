@@ -922,6 +922,11 @@ p { margin: 0 0 1.2em; }
 /* ===================================================================
  * apps page
  * ------------------------------------------------------------------- */
+/* three apps sit side by side on wide screens */
+@media (min-width: 1001px) {
+    .pubs.apps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
 .app__head {
     display: flex;
     align-items: center;
