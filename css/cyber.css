@@ -1051,3 +1051,64 @@ p { margin: 0 0 1.2em; }
     letter-spacing: .14em;
     color: var(--magenta);
 }
+
+/* ===================================================================
+ * keyword cloud (research)
+ * ------------------------------------------------------------------- */
+.cloud-panel { margin-top: 28px; }
+
+.cloud {
+    --blue: #8aa4ff;
+    --grey: #c9d3e1;
+    font-family: var(--font-head);
+    font-weight: 600;
+}
+
+.cloud ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cloud li { line-height: 1; white-space: nowrap; }
+
+.cloud a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity .25s, text-shadow .25s;
+}
+
+.cloud .c0 { color: var(--cyan); }
+.cloud .c1 { color: var(--magenta); }
+.cloud .c2 { color: var(--amber); }
+.cloud .c3 { color: var(--blue); }
+.cloud .c4 { color: var(--grey); }
+
+/* once laid out by cyber.js, words sit at absolute positions */
+.cloud.is-laid ul { display: block; position: relative; }
+.cloud.is-laid li { position: absolute; left: 0; top: 0; }
+.cloud.is-laid li.is-dropped { display: none; }
+
+.cloud.is-laid li { opacity: 0; transition: opacity .5s ease; }
+.cloud.is-shown li { opacity: 1; }
+
+/* spotlight the hovered or focused word */
+.cloud:hover a, .cloud:focus-within a { opacity: .32; }
+.cloud a:hover, .cloud a:focus-visible {
+    opacity: 1;
+    outline: none;
+    text-shadow: 0 0 14px currentColor;
+}
+
+.cloud__hint {
+    margin: 14px 0 0;
+    color: var(--text-faint);
+    font-size: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cloud.is-laid li, .cloud a { transition: none; }
+}
