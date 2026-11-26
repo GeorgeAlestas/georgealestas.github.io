@@ -297,6 +297,23 @@
             return new DOMParser().parseFromString(html, "text/html").body.textContent;
         };
 
+        const loadMathJax = function (target) {
+            window.MathJax = {
+                tex: { inlineMath: [["$", "$"], ["\\(", "\\)"]] },
+                startup: {
+                    typeset: false,
+                    ready: function () {
+                        MathJax.startup.defaultReady();
+                        MathJax.typesetPromise([target]);
+                    }
+                }
+            };
+            const script = document.createElement("script");
+            script.src = "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js";
+            script.async = true;
+            document.head.appendChild(script);
+        };
+
         fetch(url)
             .then(function (r) { return r.json(); })
             .then(function (data) {
@@ -346,7 +363,8 @@
                 });
 
                 if (status) status.textContent = papers.length + " records received";
-                if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([feed]);
+                // load MathJax only if a title actually contains LaTeX
+                if (/\$|\\\(/.test(feed.textContent)) loadMathJax(feed);
             })
             .catch(function () {
                 if (status) status.innerHTML = 'connection lost &mdash; see the <a href="https://inspirehep.net/authors/1718064">full list on INSPIRE</a>';

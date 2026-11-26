@@ -231,7 +231,7 @@ p { margin: 0 0 1.2em; }
     position: absolute;
     inset: 0;
     z-index: -3;
-    background: url("../images/milkyway.jpg") center / cover no-repeat;
+    background: url("../images/milkyway.webp") center / cover no-repeat;
     filter: saturate(1.2) brightness(.75);
 }
 
