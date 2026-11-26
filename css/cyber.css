@@ -1110,3 +1110,28 @@ p { margin: 0 0 1.2em; }
 @media (prefers-reduced-motion: reduce) {
     .cloud.is-laid li, .cloud a { transition: none; }
 }
+
+/* app screenshots on the Cool_Apps cards */
+.app__shot {
+    display: block;
+    margin: 18px 0 4px;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: rgba(3, 5, 10, 0.6);
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.app__shot img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.app__shot:hover, .app__shot:focus-visible {
+    border-color: var(--line-strong);
+    box-shadow: var(--glow-cyan);
+    outline: none;
+}
